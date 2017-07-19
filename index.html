@@ -1,0 +1,285 @@
+# GuilleWeb
+<html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=0.8,maximum-scale=1,user-scalable=0"/>
+<head>
+<title>Crea paginas GuilleWeb</title>
+<style type="text/css">
+body{
+margin:0px;
+color:black;
+font-size:medium;
+font-family:serif;
+}
+
+#preview{
+width:100%;height:40%;border:solid 2px cyan;overflow: scroll;}
+#code{
+width:100%;height:40%;border:solid 1px black;background:#ccc;color:darkcyan;overflow:scroll;text-decoration:underline;}
+#tipo,#tipo1,#tipo2{
+float:right;
+}
+</style>
+<script type="text/javascript">
+var text=" ",text1=" ",tag0=" ",tag1=" ",tag2=" ",tag3=" ",tag4=" ",tag5=" ",tag6=" ",tag7=" ",tag8=" ";
+var todo=" ",view=" ";
+function functions(){
+textos();textos1();textos2();preview();appli();
+}
+
+//tag0
+function select(){
+tag0=document.getElementById("option").value;
+document.getElementById("code").innerHTML=tag0;}
+//tag1
+function select1(){
+tag1=document.getElementById("option1").value;
+document.getElementById("code").innerHTML=tag1;}
+//tag2
+function select2(){
+tag2=document.getElementById("option2").value;
+document.getElementById("code").innerHTML=tag2;}
+//tag3
+function select3(){
+tag3=document.getElementById("option3").value;
+document.getElementById("code").innerHTML=tag3;}
+//tag4
+function select4(){
+tag4=document.getElementById("option4").value;
+document.getElementById("code").innerHTML=tag4;}
+//parrafo
+function select5(){
+tag5=document.getElementById("option5").value;
+document.getElementById("tipo").innerHTML=tag5;}
+function textos(){
+setTimeout("textos()");
+text=document.getElementById("tipo").value;}
+//parrafo2
+function select6(){
+tag6=document.getElementById("option6").value;
+document.getElementById("tipo1").innerHTML=tag6;}
+function textos1(){
+setTimeout("textos1()");
+text1=document.getElementById("tipo1").value;}
+//parrafo3
+function select7(){
+tag7=document.getElementById("option7").value;
+document.getElementById("tipo2").innerHTML=tag7;}
+function textos2(){
+setTimeout("textos2()");
+text2=document.getElementById("tipo2").value;
+}
+//tamañp de fuente
+//tag1
+function select8(){
+tag8=document.getElementById("option8").value;
+document.getElementById("code").innerHTML=tag8;}
+//vista previa
+function preview(){
+setTimeout("preview()");
+view=document.getElementById("code").value;
+document.getElementById("preview").innerHTML=view;}
+//actualizar previa
+function appli(){
+setTimeout("appli()",1000)
+todo=document.getElementById("code").innerHTML="<html><head><title>escribe un titulo</title><style>"
++"body{"+tag1+tag2+tag3+tag4+tag8+"}"
++"</style>"
++tag0+text+"<hr>"+text1+"<hr>"
++"<br>"+text2+"</body></html>";
+}
+</script>
+</head>
+<body onload="functions();">
+<form>
+<center><h3>Crea Pagina Web con html facil</h3>
+</center>
+<div id="preview"style=""<p> </P></div>
+
+<!--inicio botones-->
+<details>
+<summary>mostrat Panel</summary>
+<center>
+
+estilos generales
+</center>
+<fieldset>
+<!--color de fondo-->
+<select onchange="select1();"id="option1">
+<option>color de fondo</option>
+<optgroup>
+<option value="
+ background:black;">negro
+ </option>
+<option value="
+ background:red;">rojo</option>
+ <option value="
+ background:green;">verde</option>
+ <option value="
+ background:blue;">azul</option>
+ <option value="
+ background:white;">blanco(defaul)
+ </option>
+ </optgroup>
+</select>
+<!--color de letra-->
+<select onchange="select2();"id="option2">
+<option>color de letra</option>
+<optgroup>
+<option value="
+ color:black;">negro
+ </option>
+<option value="
+ color:red;">rojo</option>
+ <option value="
+ color:green;">verde</option>
+ <option value="
+ color:blue;">azul</option>
+ </optgroup>
+</select>
+<!--texto decoracion-->
+<select onchange="select3();"id="option3">
+<option>decorar palabras</option>
+<optgroup>
+<option value="
+text-decoration:none;
+">nada
+ </option>
+<option value="
+text-decoration:line-through;
+">tachado</option>
+ <option value="
+text-decoration:underline;
+">subrayado</option>
+ <option value="
+text-decoration:overline;
+">linea arriba</option>
+ </optgroup>
+</select>
+<!--tipo de letra-->
+<select onchange="select4();"id="option4">
+<option>tipo de letra</option>
+<optgroup>
+<option value="
+font-family:Arial,sans-serif;
+">Arial
+ </option>
+<option value="
+font-family:Courier new,monospace;
+">Courier</option>
+ <option value="
+font-family:Tahoma,Arial,sans-serif;
+">Tahoma</option>
+ <option value="
+font-family:Verdana,Arial,sans-serif;
+">Verdana</option>
+<option value="
+font-family:cursive;
+">Cursive</option>
+<option value="
+font-family:fantasy;
+">Fantasy</option>
+<option value="
+font-family:monospace;
+">Monospace</option>
+<option value="
+font-family:sans-serif;
+">Sans-serif</option>
+<option value="
+font-family:serif;
+">Serif</option>
+ </optgroup>
+ </select>
+ <!--estructura-->
+ <select onchange="select();"id="option">
+ <option>Estructura</option>
+ <option value="
+ <meta charset='UTF-8' />
+ <meta name='viewport' content='initial-scale=0.8,maximum-scale=1,user-scalable=0'/>
+ </head>
+ <body>
+ ">html</option>
+ </select>
+ <!--tamaño de letra-->
+ <select onchange="select8();"id="option8">
+ <option>tamaño de letra</option>
+ <optgroup>
+ <option value="
+font-size:xx-small;
+ ">muy pequeña
+ </option>
+ <option value="
+font-size:x-small;
+ ">medio pequeña</option>
+ <option value="
+font-size:small;
+ ">pequeña</option>
+ <option value="
+font-size:medium;
+ ">medio</option>
+ <option value="
+font-size:large;
+ ">grande
+ </option>
+ <option value="
+font-size:x-large;
+ ">medio grande</option>
+ <option value="
+font-size:xx-large;
+ ">muy grande</option>
+ <option value="
+font-size:100%;
+ ">Original (default)</option>
+ </optgroup>
+ </select>
+</fieldset>
+<details>
+<summary>Textos</summary>
+<fieldset>
+titulo: 
+<textarea type="text"id="tipo"></textarea><br>
+<hr>
+<!--textos-->
+<!--tipo de parrafo-->
+<select onchange="select5();"id="option5">
+<option>clase de parrafo</option>
+<option value="<h1> escribe aqui </h1>">h1</option>
+<option value="<h2> escribe aqui </h2>">h2</option>
+<option value="<h3> escribe aqui </h3>">h3</option>
+</select>
+<hr>
+subtitulo(opcional):
+<textarea type="text"id="tipo1"></textarea><br>
+<!--tipo de parrafo-->
+<select onchange="select6();"id="option6">
+<option>clase de parrafo</option>
+<option value="<h3> escribe aqui </h3>">h3</option>
+<option value="<h4> escribe aqui </h4>">h4</option>
+</select>
+<hr>
+Parrafos:
+<textarea type="text"id="tipo2"></textarea><br>
+<!--tipo de parrafo-->
+<select onchange="select7();"id="option7">
+<option>clase de parrafo</option>
+<option value="<p> escribe aqui </p>">p</option>
+<option value="<h4> escribe aqui </h4>">h4</option>
+<option value="<h5> escribe aqui</h5>">h5</option>
+<option value="<h6> escribe aqui </h6>">h6</option>
+</select>
+</fieldset>
+</details>
+</details><hr>
+<!--<input type="button"value="aplicar cambios"onclick="appli()"><hr>-->
+<!--mostrar codigo-->
+<details>
+<summary>mostrar codigo</summary>
+<textarea id="code"style=""></textarea>
+</details>
+</form>
+<br>
+<hr>
+<marquee>GuilleWeb</marquee>
+</body>
+</html>
+ 
